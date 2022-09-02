@@ -228,7 +228,7 @@ void *deleter(void *arg)
 void search_insert_delete()
 {
     PNODE linked_list = NULL;
-    pthread_t t_searcher[10], t_inserters[NUM_OF_INSERTERS], t_deleters[NUM_OF_DELETERS];
+    pthread_t t_searcher[NUM_OF_SEARCHERS], t_inserters[NUM_OF_INSERTERS], t_deleters[NUM_OF_DELETERS];
 
     sem_init(&s_insert_mutex, 1, 1);
     sem_init(&s_no_searcher, 1, 1);
